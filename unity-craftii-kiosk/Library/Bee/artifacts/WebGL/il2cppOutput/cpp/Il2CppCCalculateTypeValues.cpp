@@ -10644,12 +10644,12 @@ struct InvocationContext_t6E569B8D3B16D502C36B47650446CD34383A19F1  : public Run
 	RuntimeObject* ___m_State_1;
 };
 
-// ObjectController/<RequestURLParamsAfterDelay>d__36
-struct U3CRequestURLParamsAfterDelayU3Ed__36_tA7A1829D724F268A1ED992358C9D03857B071680  : public RuntimeObject
+// ObjectController/<RequestURLParamsAfterDelay>d__38
+struct U3CRequestURLParamsAfterDelayU3Ed__38_t09ECEB07FC32E2177E33FE9C3E3A2150FB941722  : public RuntimeObject
 {
-	// System.Int32 ObjectController/<RequestURLParamsAfterDelay>d__36::<>1__state
+	// System.Int32 ObjectController/<RequestURLParamsAfterDelay>d__38::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object ObjectController/<RequestURLParamsAfterDelay>d__36::<>2__current
+	// System.Object ObjectController/<RequestURLParamsAfterDelay>d__38::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
 };
 
@@ -39239,6 +39239,10 @@ struct ObjectController_tC7C3CD5CDC9519FAA82AEE4489D5319439D254BC  : public Mono
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___QRConfigCodeText_25;
 	// UnityEngine.UI.Image ObjectController::QRImage
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___QRImage_26;
+	// UnityEngine.Renderer ObjectController::sphereRenderer
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___sphereRenderer_27;
+	// UnityEngine.Material[] ObjectController::materials
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___materials_28;
 };
 
 // UnityEngine.UIElements.PopupWindow
@@ -46401,9 +46405,9 @@ struct U3CU3Ec_tCD479EE36B9C156DD31DCE5074D2D93FE71AD956_StaticFields
 
 // System.Threading.OSSpecificSynchronizationContext/InvocationContext
 
-// ObjectController/<RequestURLParamsAfterDelay>d__36
+// ObjectController/<RequestURLParamsAfterDelay>d__38
 
-// ObjectController/<RequestURLParamsAfterDelay>d__36
+// ObjectController/<RequestURLParamsAfterDelay>d__38
 
 // System.Runtime.Serialization.Formatters.Binary.ObjectReader/TopLevelAssemblyTypeResolver
 
@@ -63193,7 +63197,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3386 = { sizeof(GridLayout_t
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3387;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3387 = { sizeof(U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3388;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3388 = { sizeof(U3CRequestURLParamsAfterDelayU3Ed__36_tA7A1829D724F268A1ED992358C9D03857B071680), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3388 = { sizeof(U3CRequestURLParamsAfterDelayU3Ed__38_t09ECEB07FC32E2177E33FE9C3E3A2150FB941722), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3389;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3389 = { sizeof(ObjectController_tC7C3CD5CDC9519FAA82AEE4489D5319439D254BC), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3390;

@@ -34,19 +34,22 @@ public class ObjectController : MonoBehaviour
     public TextMeshProUGUI QRConfigCodeText;
     public Image QRImage;
 
-        // Sphere Renderer
+    // Sphere Renderer
     public Renderer sphereRenderer;
+
+    // Materials to be loaded from Resources
+    public Material[] materials;
 
     // Public properties for each configuration value, ensuring values stay within the range 0-3
     public int Config0
     {
         get => configs[0];
-        set { configs[0] = Mathf.Clamp(value, 0, 3); UpdateUI(); }
+        set { configs[0] = Mathf.Clamp(value, 0, 3); UpdateMaterial(); UpdateUI(); }
     }
     public int Config1
     {
         get => configs[1];
-        set { configs[1] = Mathf.Clamp(value, 0, 3); UpdateUI(); }
+        set { configs[1] = Mathf.Clamp(value, 0, 3); UpdateSize(); UpdateUI(); }
     }
     public int Config2
     {
@@ -94,6 +97,65 @@ public class ObjectController : MonoBehaviour
 
         // Initialize the UI display
         UpdateUI();
+        
+        // Apply initial material
+        UpdateMaterial();
+    }
+
+    private void ShowQRPanel()
+    {
+        if (QRPanel) QRPanel.SetActive(true);
+    }
+
+    private void HideQRPanel()
+    {
+        if (QRPanel) QRPanel.SetActive(false);
+    }
+
+    private void UpdateUI()
+    {
+        if (config0NameText) config0NameText.text = configNames[0];
+        if (config0ValueText) config0ValueText.text = Config0.ToString();
+        if (config1NameText) config1NameText.text = configNames[1];
+        if (config1ValueText) config1ValueText.text = Config1.ToString();
+        if (config2NameText) config2NameText.text = configNames[2];
+        if (config2ValueText) config2ValueText.text = Config2.ToString();
+        if (config3NameText) config3NameText.text = configNames[3];
+        if (config3ValueText) config3ValueText.text = Config3.ToString();
+    }
+
+    // Function to update the sphere's material based on Config0
+    private void UpdateMaterial()
+    {
+        if (sphereRenderer == null)
+        {
+            Debug.LogError("Sphere Renderer is not assigned.");
+            return;
+        }
+
+        if (materials == null || materials.Length < 4)
+        {
+            Debug.LogError("Materials array is not properly assigned in the Inspector.");
+            return;
+        }
+
+        if (Config0 >= 0 && Config0 < materials.Length && materials[Config0] != null)
+        {
+            sphereRenderer.material = materials[Config0];
+            Debug.Log($"Applied material: {materials[Config0].name}");
+        }
+        else
+        {
+            Debug.LogError($"Material for Config0 index {Config0} is missing or null.");
+        }
+    }
+
+    // Function to update the sphere's size based on Config1
+    private void UpdateSize()
+    {
+        float newSize = 0.25f + (Config1 * 0.25f);
+        transform.localScale = new Vector3(newSize, newSize, newSize);
+        Debug.Log($"Updated size to {newSize}");
     }
 
     // Function to update configuration values from a string received from JavaScript
@@ -116,47 +178,8 @@ public class ObjectController : MonoBehaviour
         configs[index] = Mathf.Clamp(configs[index] + direction, 0, 3);
         Debug.Log($"Config {index} changed from {oldValue} to {configs[index]}");
         UpdateUI();
-    }
-
-    // Function to show the QR panel and load the corresponding QR code image
-    private void ShowQRPanel()
-    {
-        string QRConfigCode = $"{Config0}{Config1}{Config2}{Config3}";
-        if (QRConfigCodeText) QRConfigCodeText.text = QRConfigCode;
         
-        // Load QR code sprite dynamically from the Resources folder
-        Sprite qrSprite = Resources.Load<Sprite>($"QR/{QRConfigCode}");
-        if (qrSprite)
-        {
-            QRImage.sprite = qrSprite;
-        }
-        else
-        {
-            Debug.LogError($"QR Image for {QRConfigCode} not found in Assets/Resources/QR/");
-        }
-        
-        if (QRPanel) QRPanel.SetActive(true);
-    }
-
-    // Function to hide the QR panel
-    private void HideQRPanel()
-    {
-        if (QRPanel) QRPanel.SetActive(false);
-    }
-
-    // Function to update UI text elements with current configuration values
-    private void UpdateUI()
-    {
-        if (config0NameText) config0NameText.text = configNames[0];
-        if (config0ValueText) config0ValueText.text = Config0.ToString();
-        
-        if (config1NameText) config1NameText.text = configNames[1];
-        if (config1ValueText) config1ValueText.text = Config1.ToString();
-        
-        if (config2NameText) config2NameText.text = configNames[2];
-        if (config2ValueText) config2ValueText.text = Config2.ToString();
-        
-        if (config3NameText) config3NameText.text = configNames[3];
-        if (config3ValueText) config3ValueText.text = Config3.ToString();
+        // Update material if Config0 is changed
+        if (index == 0) UpdateMaterial();
     }
 }

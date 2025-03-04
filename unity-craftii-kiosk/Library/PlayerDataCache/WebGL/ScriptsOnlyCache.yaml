@@ -215,7 +215,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 192b8b37c9755e4d115cc0bae577b847
+      Hash: 74521b602e03f289988253a833c2f069
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectController

@@ -34,51 +34,55 @@ extern void ObjectController_set_Config3_m643C0B11BDDDBF5509D60864A3A91A895E07A4
 extern void ObjectController_RequestURLParamsAfterDelay_m00255B93E03B407798373CF9C109F0E28090D80A (void);
 // 0x0000000B System.Void ObjectController::Start()
 extern void ObjectController_Start_m50CBBCE72AB6C2A5C8BC1977D520CF3856A91E89 (void);
-// 0x0000000C System.Void ObjectController::SetConfigFromJS(System.String)
-extern void ObjectController_SetConfigFromJS_m30374C3D5EAA8A8471BF62962DA0EBA6BE7F7C9F (void);
-// 0x0000000D System.Void ObjectController::ChangeConfig(System.Int32,System.Int32)
-extern void ObjectController_ChangeConfig_m6C21FDECB9C48BAF424EE65AB2C76F3391E45FF5 (void);
-// 0x0000000E System.Void ObjectController::ShowQRPanel()
+// 0x0000000C System.Void ObjectController::ShowQRPanel()
 extern void ObjectController_ShowQRPanel_m49F7BEBC33833315EE93A28BB5CA1EBB4EDF6DFA (void);
-// 0x0000000F System.Void ObjectController::HideQRPanel()
+// 0x0000000D System.Void ObjectController::HideQRPanel()
 extern void ObjectController_HideQRPanel_mA40AEB5719E8B31E13BE22FFDA7AA6CC99A292CC (void);
-// 0x00000010 System.Void ObjectController::UpdateUI()
+// 0x0000000E System.Void ObjectController::UpdateUI()
 extern void ObjectController_UpdateUI_m6798F27ECA375D0E39B4158DA2ABB1F31CE58412 (void);
-// 0x00000011 System.Void ObjectController::.ctor()
+// 0x0000000F System.Void ObjectController::UpdateMaterial()
+extern void ObjectController_UpdateMaterial_m78512C187B04E562A27D0EAF0D806C53230BD01C (void);
+// 0x00000010 System.Void ObjectController::UpdateSize()
+extern void ObjectController_UpdateSize_mC7945229FE3FA708C06EC2C891FA736D89ABDA7D (void);
+// 0x00000011 System.Void ObjectController::SetConfigFromJS(System.String)
+extern void ObjectController_SetConfigFromJS_m30374C3D5EAA8A8471BF62962DA0EBA6BE7F7C9F (void);
+// 0x00000012 System.Void ObjectController::ChangeConfig(System.Int32,System.Int32)
+extern void ObjectController_ChangeConfig_m6C21FDECB9C48BAF424EE65AB2C76F3391E45FF5 (void);
+// 0x00000013 System.Void ObjectController::.ctor()
 extern void ObjectController__ctor_mA008C8DFDEF1B6A05926338921FE1FD30BCEA9BC (void);
-// 0x00000012 System.Void ObjectController::<Start>b__37_0()
-extern void ObjectController_U3CStartU3Eb__37_0_m3ECBE886395564C1FA3A82F779C4ED47C2DD2F6E (void);
-// 0x00000013 System.Void ObjectController::<Start>b__37_1()
-extern void ObjectController_U3CStartU3Eb__37_1_mFA1EC8D35F3CD2AB36C64CADC253792B8A799B80 (void);
-// 0x00000014 System.Void ObjectController::<Start>b__37_2()
-extern void ObjectController_U3CStartU3Eb__37_2_m01BEBEA1E6FF0469A23A67BC58C310A2F87597C0 (void);
-// 0x00000015 System.Void ObjectController::<Start>b__37_3()
-extern void ObjectController_U3CStartU3Eb__37_3_mD9C9B92C3539CD39008E3AAA9D7705A0526B6F34 (void);
-// 0x00000016 System.Void ObjectController::<Start>b__37_4()
-extern void ObjectController_U3CStartU3Eb__37_4_m4EF271C211DED66F9D6CACF410CE2A2A4B2715A4 (void);
-// 0x00000017 System.Void ObjectController::<Start>b__37_5()
-extern void ObjectController_U3CStartU3Eb__37_5_m86CE44790AE4BDB08CE21C612BF584BF1114DECC (void);
-// 0x00000018 System.Void ObjectController::<Start>b__37_6()
-extern void ObjectController_U3CStartU3Eb__37_6_mB90EF6FBE16F9C9595323FE2B685276914C17AB2 (void);
-// 0x00000019 System.Void ObjectController::<Start>b__37_7()
-extern void ObjectController_U3CStartU3Eb__37_7_mD513E798B98AB8EB9C390D478B1A436F55A430E2 (void);
-// 0x0000001A System.Void ObjectController::<Start>b__37_8()
-extern void ObjectController_U3CStartU3Eb__37_8_m979E0830B3227BF67CA1E8C1EC59F4FF35AA8EF9 (void);
-// 0x0000001B System.Void ObjectController::<Start>b__37_9()
-extern void ObjectController_U3CStartU3Eb__37_9_mB066D5BDA5F768060EC2BE7B1DB68D7AA2C7AB26 (void);
-// 0x0000001C System.Void ObjectController/<RequestURLParamsAfterDelay>d__36::.ctor(System.Int32)
-extern void U3CRequestURLParamsAfterDelayU3Ed__36__ctor_m72D36C9546CCE6E3A00293490B23F2505394D0B4 (void);
-// 0x0000001D System.Void ObjectController/<RequestURLParamsAfterDelay>d__36::System.IDisposable.Dispose()
-extern void U3CRequestURLParamsAfterDelayU3Ed__36_System_IDisposable_Dispose_m88D3011328D7015BDA9B35127BF9852B61A6A094 (void);
-// 0x0000001E System.Boolean ObjectController/<RequestURLParamsAfterDelay>d__36::MoveNext()
-extern void U3CRequestURLParamsAfterDelayU3Ed__36_MoveNext_m077288530C99D7DF246E0F4DF9E4DB9E7BE076A6 (void);
-// 0x0000001F System.Object ObjectController/<RequestURLParamsAfterDelay>d__36::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CRequestURLParamsAfterDelayU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD00219DB5625882DD7C0B0295BCCE5DF4A66BF86 (void);
-// 0x00000020 System.Void ObjectController/<RequestURLParamsAfterDelay>d__36::System.Collections.IEnumerator.Reset()
-extern void U3CRequestURLParamsAfterDelayU3Ed__36_System_Collections_IEnumerator_Reset_mB958A66D094479C363CCDCAEA590ED5E9E65B75E (void);
-// 0x00000021 System.Object ObjectController/<RequestURLParamsAfterDelay>d__36::System.Collections.IEnumerator.get_Current()
-extern void U3CRequestURLParamsAfterDelayU3Ed__36_System_Collections_IEnumerator_get_Current_mCCF781C0551C1B5EB399EAB0A09F24EDE3FC08CC (void);
-static Il2CppMethodPointer s_methodPointers[33] = 
+// 0x00000014 System.Void ObjectController::<Start>b__39_0()
+extern void ObjectController_U3CStartU3Eb__39_0_mE35311B31538756D8362FE7E5B1BDBD15E3BAE99 (void);
+// 0x00000015 System.Void ObjectController::<Start>b__39_1()
+extern void ObjectController_U3CStartU3Eb__39_1_mCEFFFA7ABB710343EFCC04AC2CA5B4B3E503B6FE (void);
+// 0x00000016 System.Void ObjectController::<Start>b__39_2()
+extern void ObjectController_U3CStartU3Eb__39_2_mD47D733DF8DFE513958407E513E95BDE414DEE30 (void);
+// 0x00000017 System.Void ObjectController::<Start>b__39_3()
+extern void ObjectController_U3CStartU3Eb__39_3_m5780CE6161D08EEE93BA1413366C442E16B75AC0 (void);
+// 0x00000018 System.Void ObjectController::<Start>b__39_4()
+extern void ObjectController_U3CStartU3Eb__39_4_mB10CD6E3BCEF5734E90D4C7A8BA889094E7FD20A (void);
+// 0x00000019 System.Void ObjectController::<Start>b__39_5()
+extern void ObjectController_U3CStartU3Eb__39_5_mA2E8A9DD421A8503FF487B72331405FC823DE1E4 (void);
+// 0x0000001A System.Void ObjectController::<Start>b__39_6()
+extern void ObjectController_U3CStartU3Eb__39_6_mF1E2F68F1F5FCB407B2FA5D1AD99B5F4663C1122 (void);
+// 0x0000001B System.Void ObjectController::<Start>b__39_7()
+extern void ObjectController_U3CStartU3Eb__39_7_m4F83D1275D9B18143BC82E5D5D74D7B0D403060C (void);
+// 0x0000001C System.Void ObjectController::<Start>b__39_8()
+extern void ObjectController_U3CStartU3Eb__39_8_mBB42B8D31DB87C96B93F00741216D2A0EAA4DA5B (void);
+// 0x0000001D System.Void ObjectController::<Start>b__39_9()
+extern void ObjectController_U3CStartU3Eb__39_9_m299D9A9D3355B0B2F5DB7243F898BC9E864357B3 (void);
+// 0x0000001E System.Void ObjectController/<RequestURLParamsAfterDelay>d__38::.ctor(System.Int32)
+extern void U3CRequestURLParamsAfterDelayU3Ed__38__ctor_m1F763E8D8D1CAD9C6F4D26D180AF5A2AA2E68E43 (void);
+// 0x0000001F System.Void ObjectController/<RequestURLParamsAfterDelay>d__38::System.IDisposable.Dispose()
+extern void U3CRequestURLParamsAfterDelayU3Ed__38_System_IDisposable_Dispose_m94EABABCDD8E808707597E0430713EBFA5E33788 (void);
+// 0x00000020 System.Boolean ObjectController/<RequestURLParamsAfterDelay>d__38::MoveNext()
+extern void U3CRequestURLParamsAfterDelayU3Ed__38_MoveNext_mB81BE94299DCE2C519FBFC9DD8D488189FAE1AA3 (void);
+// 0x00000021 System.Object ObjectController/<RequestURLParamsAfterDelay>d__38::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CRequestURLParamsAfterDelayU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEA62445A31A1AB0188DFAC5E0D43F2689BCB8F63 (void);
+// 0x00000022 System.Void ObjectController/<RequestURLParamsAfterDelay>d__38::System.Collections.IEnumerator.Reset()
+extern void U3CRequestURLParamsAfterDelayU3Ed__38_System_Collections_IEnumerator_Reset_mED95EFF55F101832FA0D952292E21E5059CA4E41 (void);
+// 0x00000023 System.Object ObjectController/<RequestURLParamsAfterDelay>d__38::System.Collections.IEnumerator.get_Current()
+extern void U3CRequestURLParamsAfterDelayU3Ed__38_System_Collections_IEnumerator_get_Current_m981E2DA07EF2C40B07E39EB5AF7DFE9C061B730B (void);
+static Il2CppMethodPointer s_methodPointers[35] = 
 {
 	ObjectController_SendMessageToJS_mFA98A92195693018F9E0876CBAFF8F812C461527,
 	ObjectController_get_Config0_m439A4077546DA31DDA31552D2B0687F77E00CB17,
@@ -91,30 +95,32 @@ static Il2CppMethodPointer s_methodPointers[33] =
 	ObjectController_set_Config3_m643C0B11BDDDBF5509D60864A3A91A895E07A4CF,
 	ObjectController_RequestURLParamsAfterDelay_m00255B93E03B407798373CF9C109F0E28090D80A,
 	ObjectController_Start_m50CBBCE72AB6C2A5C8BC1977D520CF3856A91E89,
-	ObjectController_SetConfigFromJS_m30374C3D5EAA8A8471BF62962DA0EBA6BE7F7C9F,
-	ObjectController_ChangeConfig_m6C21FDECB9C48BAF424EE65AB2C76F3391E45FF5,
 	ObjectController_ShowQRPanel_m49F7BEBC33833315EE93A28BB5CA1EBB4EDF6DFA,
 	ObjectController_HideQRPanel_mA40AEB5719E8B31E13BE22FFDA7AA6CC99A292CC,
 	ObjectController_UpdateUI_m6798F27ECA375D0E39B4158DA2ABB1F31CE58412,
+	ObjectController_UpdateMaterial_m78512C187B04E562A27D0EAF0D806C53230BD01C,
+	ObjectController_UpdateSize_mC7945229FE3FA708C06EC2C891FA736D89ABDA7D,
+	ObjectController_SetConfigFromJS_m30374C3D5EAA8A8471BF62962DA0EBA6BE7F7C9F,
+	ObjectController_ChangeConfig_m6C21FDECB9C48BAF424EE65AB2C76F3391E45FF5,
 	ObjectController__ctor_mA008C8DFDEF1B6A05926338921FE1FD30BCEA9BC,
-	ObjectController_U3CStartU3Eb__37_0_m3ECBE886395564C1FA3A82F779C4ED47C2DD2F6E,
-	ObjectController_U3CStartU3Eb__37_1_mFA1EC8D35F3CD2AB36C64CADC253792B8A799B80,
-	ObjectController_U3CStartU3Eb__37_2_m01BEBEA1E6FF0469A23A67BC58C310A2F87597C0,
-	ObjectController_U3CStartU3Eb__37_3_mD9C9B92C3539CD39008E3AAA9D7705A0526B6F34,
-	ObjectController_U3CStartU3Eb__37_4_m4EF271C211DED66F9D6CACF410CE2A2A4B2715A4,
-	ObjectController_U3CStartU3Eb__37_5_m86CE44790AE4BDB08CE21C612BF584BF1114DECC,
-	ObjectController_U3CStartU3Eb__37_6_mB90EF6FBE16F9C9595323FE2B685276914C17AB2,
-	ObjectController_U3CStartU3Eb__37_7_mD513E798B98AB8EB9C390D478B1A436F55A430E2,
-	ObjectController_U3CStartU3Eb__37_8_m979E0830B3227BF67CA1E8C1EC59F4FF35AA8EF9,
-	ObjectController_U3CStartU3Eb__37_9_mB066D5BDA5F768060EC2BE7B1DB68D7AA2C7AB26,
-	U3CRequestURLParamsAfterDelayU3Ed__36__ctor_m72D36C9546CCE6E3A00293490B23F2505394D0B4,
-	U3CRequestURLParamsAfterDelayU3Ed__36_System_IDisposable_Dispose_m88D3011328D7015BDA9B35127BF9852B61A6A094,
-	U3CRequestURLParamsAfterDelayU3Ed__36_MoveNext_m077288530C99D7DF246E0F4DF9E4DB9E7BE076A6,
-	U3CRequestURLParamsAfterDelayU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD00219DB5625882DD7C0B0295BCCE5DF4A66BF86,
-	U3CRequestURLParamsAfterDelayU3Ed__36_System_Collections_IEnumerator_Reset_mB958A66D094479C363CCDCAEA590ED5E9E65B75E,
-	U3CRequestURLParamsAfterDelayU3Ed__36_System_Collections_IEnumerator_get_Current_mCCF781C0551C1B5EB399EAB0A09F24EDE3FC08CC,
+	ObjectController_U3CStartU3Eb__39_0_mE35311B31538756D8362FE7E5B1BDBD15E3BAE99,
+	ObjectController_U3CStartU3Eb__39_1_mCEFFFA7ABB710343EFCC04AC2CA5B4B3E503B6FE,
+	ObjectController_U3CStartU3Eb__39_2_mD47D733DF8DFE513958407E513E95BDE414DEE30,
+	ObjectController_U3CStartU3Eb__39_3_m5780CE6161D08EEE93BA1413366C442E16B75AC0,
+	ObjectController_U3CStartU3Eb__39_4_mB10CD6E3BCEF5734E90D4C7A8BA889094E7FD20A,
+	ObjectController_U3CStartU3Eb__39_5_mA2E8A9DD421A8503FF487B72331405FC823DE1E4,
+	ObjectController_U3CStartU3Eb__39_6_mF1E2F68F1F5FCB407B2FA5D1AD99B5F4663C1122,
+	ObjectController_U3CStartU3Eb__39_7_m4F83D1275D9B18143BC82E5D5D74D7B0D403060C,
+	ObjectController_U3CStartU3Eb__39_8_mBB42B8D31DB87C96B93F00741216D2A0EAA4DA5B,
+	ObjectController_U3CStartU3Eb__39_9_m299D9A9D3355B0B2F5DB7243F898BC9E864357B3,
+	U3CRequestURLParamsAfterDelayU3Ed__38__ctor_m1F763E8D8D1CAD9C6F4D26D180AF5A2AA2E68E43,
+	U3CRequestURLParamsAfterDelayU3Ed__38_System_IDisposable_Dispose_m94EABABCDD8E808707597E0430713EBFA5E33788,
+	U3CRequestURLParamsAfterDelayU3Ed__38_MoveNext_mB81BE94299DCE2C519FBFC9DD8D488189FAE1AA3,
+	U3CRequestURLParamsAfterDelayU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEA62445A31A1AB0188DFAC5E0D43F2689BCB8F63,
+	U3CRequestURLParamsAfterDelayU3Ed__38_System_Collections_IEnumerator_Reset_mED95EFF55F101832FA0D952292E21E5059CA4E41,
+	U3CRequestURLParamsAfterDelayU3Ed__38_System_Collections_IEnumerator_get_Current_m981E2DA07EF2C40B07E39EB5AF7DFE9C061B730B,
 };
-static const int32_t s_InvokerIndices[33] = 
+static const int32_t s_InvokerIndices[35] = 
 {
 	4964,
 	3280,
@@ -127,11 +133,13 @@ static const int32_t s_InvokerIndices[33] =
 	2751,
 	3299,
 	3391,
+	3391,
+	3391,
+	3391,
+	3391,
+	3391,
 	2768,
 	1394,
-	3391,
-	3391,
-	3391,
 	3391,
 	3391,
 	3391,
@@ -154,7 +162,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	33,
+	35,
 	s_methodPointers,
 	0,
 	NULL,

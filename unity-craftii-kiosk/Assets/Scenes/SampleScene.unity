@@ -501,7 +501,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3fd390187094547baaf5c9fd79577072, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -579,6 +579,12 @@ MonoBehaviour:
   HideQRBtn: {fileID: 1287589328}
   QRConfigCodeText: {fileID: 777322343}
   QRImage: {fileID: 887238685}
+  sphereRenderer: {fileID: 173785353}
+  materials:
+  - {fileID: 2100000, guid: 3fd390187094547baaf5c9fd79577072, type: 2}
+  - {fileID: 2100000, guid: 3e8b4eada552b44fe9973ff1afa1398f, type: 2}
+  - {fileID: 2100000, guid: 16c5eb77657024a1a8b3b83fd0eb6bc5, type: 2}
+  - {fileID: 2100000, guid: bb4538d7f1a2d4acaa91c8a9b0d619b6, type: 2}
 --- !u!1 &235771427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1807,8 @@ MonoBehaviour:
   HideQRBtn: {fileID: 0}
   QRConfigCodeText: {fileID: 0}
   QRImage: {fileID: 0}
+  sphereRenderer: {fileID: 0}
+  materials: []
 --- !u!1 &706277318
 GameObject:
   m_ObjectHideFlags: 0
