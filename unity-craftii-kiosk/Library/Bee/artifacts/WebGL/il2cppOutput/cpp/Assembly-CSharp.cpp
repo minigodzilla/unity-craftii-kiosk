@@ -2767,7 +2767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_Start_m50CBBCE72AB6C2A5
 
 IL_0019:
 	{
-		// StartCoroutine(RequestURLParamsAfterDelay()); // Now it waits before calling JS
+		// StartCoroutine(RequestURLParamsAfterDelay());
 		RuntimeObject* L_3;
 		L_3 = ObjectController_RequestURLParamsAfterDelay_m00255B93E03B407798373CF9C109F0E28090D80A(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4;
@@ -2992,7 +2992,7 @@ IL_0197:
 
 IL_01c0:
 	{
-		// UpdateUI(); // Ensure UI updates when game starts
+		// UpdateUI();
 		ObjectController_UpdateUI_m6798F27ECA375D0E39B4158DA2ABB1F31CE58412(__this, NULL);
 		// }
 		return;
@@ -3660,9 +3660,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRequestURLParamsAfterDelayU3Ed__36_Mo
 IL_0010:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		// yield return new WaitForSeconds(1.0f); // Delay to ensure Unity is loaded
+		// yield return new WaitForSeconds(2.0f); // Wait to ensure Unity is fully loaded
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (1.0f), NULL);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (2.0f), NULL);
 		__this->___U3CU3E2__current_1 = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_3);
 		__this->___U3CU3E1__state_0 = 1;

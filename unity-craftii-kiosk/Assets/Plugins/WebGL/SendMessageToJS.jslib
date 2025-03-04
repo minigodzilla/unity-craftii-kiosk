@@ -1,5 +1,7 @@
 mergeInto(LibraryManager.library, {
     SendMessageToJS: function (message) {
+        // In order to complete a clean WebGL build we need to define SendMessageToJS in a WebGL plugin file
+
         let msg = UTF8ToString(message);
         console.log('Received message from Unity:', msg);
 

@@ -7,32 +7,37 @@ using System.Collections;
 public class ObjectController : MonoBehaviour
 {
     #if UNITY_WEBGL && !UNITY_EDITOR
+    // Importing a JavaScript function for WebGL builds to communicate with the browser
     [DllImport("__Internal")]
     private static extern void SendMessageToJS(string message);
-#endif
+    #endif
 
+    // Configuration array to store different settings
     private int[] configs = new int[4];
-    private readonly string[] configNames = { "Material", "Texture", "Color", "Normals" };
+    private readonly string[] configNames = { "Material", "Size", "Rot. Speed", "Not used" };
 
-    // UI References for names and values separately
+    // UI Text references for displaying configuration names and values
     public TextMeshProUGUI config0NameText, config0ValueText;
     public TextMeshProUGUI config1NameText, config1ValueText;
     public TextMeshProUGUI config2NameText, config2ValueText;
     public TextMeshProUGUI config3NameText, config3ValueText;
 
-    // UI Button References
+    // UI Buttons for incrementing and decrementing configuration values
     public Button config0BtnPrev, config0BtnNext;
     public Button config1BtnPrev, config1BtnNext;
     public Button config2BtnPrev, config2BtnNext;
     public Button config3BtnPrev, config3BtnNext;
 
-    // QR Panel and Buttons
+    // QR Code UI elements
     public GameObject QRPanel;
     public Button ShowQRBtn, HideQRBtn;
     public TextMeshProUGUI QRConfigCodeText;
     public Image QRImage;
 
-    // Public properties with UI updates
+        // Sphere Renderer
+    public Renderer sphereRenderer;
+
+    // Public properties for each configuration value, ensuring values stay within the range 0-3
     public int Config0
     {
         get => configs[0];
@@ -54,9 +59,10 @@ public class ObjectController : MonoBehaviour
         set { configs[3] = Mathf.Clamp(value, 0, 3); UpdateUI(); }
     }
 
+    // Coroutine to request URL parameters from JavaScript after a delay
     private IEnumerator RequestURLParamsAfterDelay()
     {
-        yield return new WaitForSeconds(1.0f); // Delay to ensure Unity is loaded
+        yield return new WaitForSeconds(2.0f); // Wait to ensure Unity is fully loaded
 
         #if UNITY_WEBGL && !UNITY_EDITOR
             Debug.Log("Requesting URL Params from JavaScript...");
@@ -66,12 +72,13 @@ public class ObjectController : MonoBehaviour
 
     private void Start()
     {
-        // Ensure QRPanel is disabled at start
+        // Ensure the QR panel is hidden at the start
         if (QRPanel) QRPanel.SetActive(false);
         
-        StartCoroutine(RequestURLParamsAfterDelay()); // Now it waits before calling JS
+        // Start the coroutine to request URL parameters (for WebGL)
+        StartCoroutine(RequestURLParamsAfterDelay());
 
-        // Assign button listeners with null checks
+        // Assign button click event listeners for configuration navigation
         if (config0BtnPrev) config0BtnPrev.onClick.AddListener(() => ChangeConfig(0, -1));
         if (config0BtnNext) config0BtnNext.onClick.AddListener(() => ChangeConfig(0, 1));
         if (config1BtnPrev) config1BtnPrev.onClick.AddListener(() => ChangeConfig(1, -1));
@@ -81,13 +88,15 @@ public class ObjectController : MonoBehaviour
         if (config3BtnPrev) config3BtnPrev.onClick.AddListener(() => ChangeConfig(3, -1));
         if (config3BtnNext) config3BtnNext.onClick.AddListener(() => ChangeConfig(3, 1));
         
-        // Assign QR panel button listeners
+        // Assign button click event listeners for showing and hiding the QR panel
         if (ShowQRBtn) ShowQRBtn.onClick.AddListener(() => ShowQRPanel());
         if (HideQRBtn) HideQRBtn.onClick.AddListener(() => HideQRPanel());
 
-        UpdateUI(); // Ensure UI updates when game starts
+        // Initialize the UI display
+        UpdateUI();
     }
 
+    // Function to update configuration values from a string received from JavaScript
     public void SetConfigFromJS(string configString)
     {
         if (configString.Length == 4)
@@ -100,6 +109,7 @@ public class ObjectController : MonoBehaviour
         }
     }
 
+    // Function to change a specific configuration value with range clamping
     private void ChangeConfig(int index, int direction)
     {
         int oldValue = configs[index];
@@ -108,12 +118,13 @@ public class ObjectController : MonoBehaviour
         UpdateUI();
     }
 
+    // Function to show the QR panel and load the corresponding QR code image
     private void ShowQRPanel()
     {
         string QRConfigCode = $"{Config0}{Config1}{Config2}{Config3}";
         if (QRConfigCodeText) QRConfigCodeText.text = QRConfigCode;
         
-        // Load the corresponding QR image from Resources folder
+        // Load QR code sprite dynamically from the Resources folder
         Sprite qrSprite = Resources.Load<Sprite>($"QR/{QRConfigCode}");
         if (qrSprite)
         {
@@ -127,11 +138,13 @@ public class ObjectController : MonoBehaviour
         if (QRPanel) QRPanel.SetActive(true);
     }
 
+    // Function to hide the QR panel
     private void HideQRPanel()
     {
         if (QRPanel) QRPanel.SetActive(false);
     }
 
+    // Function to update UI text elements with current configuration values
     private void UpdateUI()
     {
         if (config0NameText) config0NameText.text = configNames[0];
