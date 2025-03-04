@@ -1689,7 +1689,6 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
-  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1774,41 +1773,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &705507996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e7c64a89f7a4a5fbc488c7194e38f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  config0NameText: {fileID: 822833299}
-  config0ValueText: {fileID: 1192533199}
-  config1NameText: {fileID: 515705926}
-  config1ValueText: {fileID: 382311684}
-  config2NameText: {fileID: 799142439}
-  config2ValueText: {fileID: 2053792990}
-  config3NameText: {fileID: 84843876}
-  config3ValueText: {fileID: 326170244}
-  config0BtnPrev: {fileID: 0}
-  config0BtnNext: {fileID: 0}
-  config1BtnPrev: {fileID: 0}
-  config1BtnNext: {fileID: 0}
-  config2BtnPrev: {fileID: 0}
-  config2BtnNext: {fileID: 0}
-  config3BtnPrev: {fileID: 0}
-  config3BtnNext: {fileID: 0}
-  QRPanel: {fileID: 0}
-  ShowQRBtn: {fileID: 0}
-  HideQRBtn: {fileID: 0}
-  QRConfigCodeText: {fileID: 0}
-  QRImage: {fileID: 0}
-  sphereRenderer: {fileID: 0}
-  materials: []
 --- !u!1 &706277318
 GameObject:
   m_ObjectHideFlags: 0

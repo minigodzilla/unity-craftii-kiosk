@@ -16,6 +16,9 @@ public class ObjectController : MonoBehaviour
     private int[] configs = new int[4];
     private readonly string[] configNames = { "Material", "Size", "Rot. Speed", "Not used" };
 
+    // Float to store the rotation speed
+    private float rotationSpeed = 0.0f;
+
     // UI Text references for displaying configuration names and values
     public TextMeshProUGUI config0NameText, config0ValueText;
     public TextMeshProUGUI config1NameText, config1ValueText;
@@ -54,7 +57,7 @@ public class ObjectController : MonoBehaviour
     public int Config2
     {
         get => configs[2];
-        set { configs[2] = Mathf.Clamp(value, 0, 3); UpdateRotSpeed(); UpdateUI(); }
+        set { configs[2] = Mathf.Clamp(value, 0, 3); UpdateRotationSpeed(); UpdateUI(); }
     }
     public int Config3
     {
@@ -105,7 +108,13 @@ public class ObjectController : MonoBehaviour
         UpdateSize();
 
         // Apply initial rotation speed
-        UpdateRotSpeed();
+        UpdateRotationSpeed();
+    }
+
+    private void Update()
+    {
+        // Rotate the sphere
+        RotateObject(rotationSpeed);
     }
 
     // Function to show the QR panel and load the corresponding QR code image
@@ -183,11 +192,16 @@ public class ObjectController : MonoBehaviour
     }
 
     // Function to update the sphere's rotational speed
-    private void UpdateRotSpeed()
+    private void UpdateRotationSpeed()
     {
-        float newSpeed = 10.0f + (Config2 * 10.0f);
-        transform.Rotate(Vector3.up, newSpeed * Time.deltaTime);
-        Debug.Log($"Rotating at {newSpeed} degrees per second");
+        rotationSpeed = (Config2 * 20.0f);
+        Debug.Log($"Rotating at {rotationSpeed} degrees per second");
+    }
+
+    // Function to perform the rotation
+    public void RotateObject(float speed)
+    {
+        transform.Rotate(Vector3.up, speed * Time.deltaTime);
     }
 
     // Function to update configuration values from a string received from JavaScript
@@ -218,6 +232,6 @@ public class ObjectController : MonoBehaviour
         if (index == 1) UpdateSize();
 
         // Update rotation speed if Config2 is changed
-        if (index == 2) UpdateRotSpeed();
+        if (index == 2) UpdateRotationSpeed();
     }
 }
