@@ -68,7 +68,7 @@ public class ObjectController : MonoBehaviour
     // Coroutine to request URL parameters from JavaScript after a delay
     private IEnumerator RequestURLParamsAfterDelay()
     {
-        yield return new WaitForSeconds(2.0f); // Wait to ensure Unity is fully loaded
+        yield return new WaitForSeconds(0.0f); // Wait to ensure Unity is fully loaded
 
         #if UNITY_WEBGL && !UNITY_EDITOR
             Debug.Log("Requesting URL Params from JavaScript...");
